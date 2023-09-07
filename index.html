@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Expense Tracker</title>
+</head>
+<body>
+  <main class="main-container">
+    <div class="alert">
+      <span class="alert-msg">Transaction Added</span>
+    </div>
+      <h2 class="title">Expense Tracker</h2>
+      <div class="balance-container">
+        <div class="balance-box">
+          <h3 class="balance-title">your balance</h3>
+          <span class="balance-value" id="balance-value">$640.00</span>
+        </div>
+      </div>
+      <div class="income-expense-card">
+        <div class="income-card">
+          <p class="income-title">Income</p>
+          <h3 class="income-value">452.00</h3>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="expense-card">
+          <p class="expense-title">Expense</p>
+          <h3 class="expense-value">42.00</h3>
+        </div>
+      </div>
+      <div class="transaction-history">
+        <h3 class="history-title">history</h3>
+        <ul class="transaction-container">
+          <li class="transaction-list-item transaction-income">
+            <div class="content-list-item">
+              <span class="list-item">car</span>
+              <span class="list-item-price">+789</span>
+            </div>
+            <div class="close-box">
+              <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+          </li>
+          <li class="transaction-list-item transaction-expense">
+            <div class="content-list-item">
+              <span class="list-item">car</span>
+              <span class="list-item-price">+789</span>
+            </div>
+            <div class="close-box">
+              <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="new-transaction">
+        <h3 class="new-transaction-title">
+          Add new transaction
+        </h3>
+        <div class="description-box">
+          <label for="inp-description" class="description">Text</label>
+          <input type="text" placeholder="Enter description..." id="inp-description" class="inp-description">
+        </div>
+        <div class="items-to-add">
+          <div class="transaction-type-container">
+            <label for="transaction-type">Type</label>
+            <select id="transaction-type" class="transaction-type">
+              <option value="">Select any one</option>
+              <option value="expense">Expense</option>
+              <option value="income">Income</option>
+            </select>
+          </div>
+          <div class="amt-box">
+            <label for="inp-amt" class="inp-amount">Amount</label>
+            <input type="number" placeholder="Enter amount..." id="inp-amt" class="inp-amt">
+          </div>
+          <input type="button" class="btn-add" id="btn-add" value="Add transaction">
+          <div class="btn-add-box">
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
