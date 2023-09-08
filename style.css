@@ -54,8 +54,8 @@ ul li {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: stretch;
+  justify-content: flex-start;
+  /* align-items: stretch; */
 
 }
 
@@ -64,13 +64,13 @@ ul li {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 900;
-  align-items: flex-start;
+  /* align-items: flex-start; */
 }
 
 .balance-value {
   font-size: 1.6rem;
   font-weight: 800;
-  text-align: start;
+  /* text-align: start; */
 }
 
 .balance-box {

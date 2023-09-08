@@ -15,7 +15,6 @@ const listContainerEle = document.querySelector('.transaction-container');
 const alertMsgEle = document.querySelector('.alert-msg');
 const alertContainerEle = document.querySelector('.alert');
 
-// gv
 let data = localStorage.getItem("data") ? JSON.parse(localStorage.getItem("data")) : [];
 
 // functions
@@ -90,6 +89,13 @@ const calculateBalance = ()=>{
   // calc income
   const totalIncome = data.filter((obj)=> obj.transaction_type === "income").map((item)=> item.amount).reduce((sum,amount)=> sum += amount,0);
   incomeValueEle.innerText = `₹${totalIncome.toFixed(2)}`;
+  // filter
+  /* obj = {
+    id:,
+    transactiontype,
+    amt,
+    description
+  } */
   // calc expense
   const totalExpense = data.filter((obj)=> obj.transaction_type === "expense").map((item)=> item.amount).reduce((sum,amount)=> sum += amount,0);
   expenseValueEle.innerText = `₹${totalExpense.toFixed(2)}`;
